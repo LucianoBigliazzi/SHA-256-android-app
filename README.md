@@ -1,7 +1,7 @@
 # SHA-256-android-app
 
 # Autore 
-|Luciano Bigliazzi|
+Luciano Bigliazzi
 
 # Descrizione
 

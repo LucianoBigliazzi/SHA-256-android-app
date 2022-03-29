@@ -65,8 +65,22 @@ public class MainActivity extends AppCompatActivity {
                 clipboard.setPrimaryClip(clip);
 
                 Toast.makeText(getApplicationContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                showLast(text);
             }
         });
+    }
+
+    public void showLast(String lastString){
+        TextView lastHashBox = findViewById(R.id.lastStringHashed);
+
+        if(lastString.equals(""))
+            lastHashBox.setText("*Empty string*");
+        else if(lastString.equals(" "))
+            lastHashBox.setText("*Space*");
+        else
+            lastHashBox.setText(lastString);
+
     }
 
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ClipboardManager;
@@ -36,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        myProgram();
+        mainProgram();
+        flowerButtonProgram();
 
 
     }
 
-    public void myProgram(){
+    public void mainProgram(){
 
         inputText = (EditText) findViewById(R.id.inputText);
         hashBtn = (Button) findViewById(R.id.CalculateHashbutton);
@@ -92,6 +94,17 @@ public class MainActivity extends AppCompatActivity {
         byte[] digest = md.digest();
 
         return String.format("%064x", new BigInteger(1, digest));
+    }
+
+    public void flowerButtonProgram(){
+        ImageButton flowerButton = findViewById(R.id.flowerButton);
+
+        flowerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Inspired by Pupi, made with love", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

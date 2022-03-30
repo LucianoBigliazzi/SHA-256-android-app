@@ -50,6 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:focusable="false"
+        android:textIsSelectable="true"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/CalculateHashbutton"
         app:layout_constraintEnd_toEndOf="parent"

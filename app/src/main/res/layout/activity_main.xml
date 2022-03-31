@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#006064"
+    android:backgroundTint="#121212"
     android:visibility="visible"
     tools:context=".MainActivity">
 
@@ -11,7 +13,8 @@
         android:id="@+id/CalculateHashbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="384dp"
+        android:layout_marginBottom="370dp"
+        android:backgroundTint="#009688"
         android:text="Generate Hash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,21 +24,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="650dp"
         android:text="SHA-256 CALCULATOR "
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#009688"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="52dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/inputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#009688"
         android:ems="10"
         android:hint="Digit here"
         android:inputType="textNoSuggestions"
@@ -43,8 +51,10 @@
         android:textColor="#009688"
         app:layout_constraintBottom_toTopOf="@+id/CalculateHashbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
 
     <TextView
         android:id="@+id/resultBox"
@@ -67,17 +77,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lastStringLabel"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/lastStringLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last string hashed: "
+        android:textColor="#009688"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54"
+        app:layout_constraintVertical_bias="0.6"
         tools:layout_editor_absoluteX="0dp" />
 
     <ImageButton

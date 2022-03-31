@@ -6,6 +6,8 @@ import android.content.ClipData;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -20,6 +22,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.nio.charset.StandardCharsets;
 import java.math.BigInteger;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
+        removeTitleBar();
         mainProgram();
         flowerButtonProgram();
 
@@ -63,12 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 outputText.setText(digest);
+
                 ClipData clip = ClipData.newPlainText("digest", digest);
                 clipboard.setPrimaryClip(clip);
-
                 Toast.makeText(getApplicationContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
 
                 showLast(text);
+
             }
         });
     }
@@ -105,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Inspired by Pupi, made with love", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void removeTitleBar(){
+        Objects.requireNonNull(getSupportActionBar()).hide();
     }
 
 
